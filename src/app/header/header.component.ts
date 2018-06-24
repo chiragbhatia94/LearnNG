@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  // tslint:disable-next-line:no-output-rename
+  @Output('navigateApp')
+  navigate = new EventEmitter<{ recipesSelected: boolean }>();
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  onNavigation(selectRecipes: boolean) {
+    this.navigate.emit({ recipesSelected: selectRecipes });
   }
-
 }

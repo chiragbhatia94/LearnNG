@@ -11,16 +11,8 @@ export class RecipeListComponent implements OnInit {
 
   constructor() {
     this.recipes = [
-      new Recipe(
-        'Dal Bati',
-        'My favorite dish',
-        'https://i.ndtvimg.com/i/2017-10/easy-dal-recipes_806x605_41507285934.jpg'
-      ),
-      new Recipe(
-        'Dal Bati',
-        'My favorite dish',
-        'https://i.ndtvimg.com/i/2017-10/easy-dal-recipes_806x605_41507285934.jpg'
-      )
+      new Recipe('Dal Bati', 'My favorite dish', 'assets/images/dalbati.jpg'),
+      new Recipe('Dal Bati', 'My favorite dish', 'assets/images/dalbati.jpg')
     ];
   }
 
