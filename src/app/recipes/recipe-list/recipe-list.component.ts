@@ -13,8 +13,8 @@ export class RecipeListComponent implements OnInit {
 
   constructor() {
     this.recipes = [
-      new Recipe('Dal Bati', 'My favorite dish', 'assets/images/dalbati.jpg'),
-      new Recipe('Dal Bati', 'My favorite dish', 'assets/images/dalbati.jpg')
+      new Recipe('A recipe', 'My favorite dish', 'assets/images/recipe.jpg'),
+      new Recipe('A recipe', 'My favorite dish', 'assets/images/recipe.jpg')
     ];
   }
 
