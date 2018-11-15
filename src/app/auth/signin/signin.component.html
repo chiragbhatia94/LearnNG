@@ -1,16 +1,15 @@
 <div class="row">
-  <h3>Sign In</h3>
   <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <form (ngSubmit)="onSignin(f)" #f="ngForm">
       <div class="form-group">
         <label for="email">Mail</label>
-        <input type="email" name="email" id="email" ngModel class="form-control">
+        <input type="email" id="email" name="email" ngModel class="form-control">
       </div>
       <div class="form-group">
         <label for="password">Password</label>
-        <input type="password" name="password" id="password" ngModel class="form-control">
+        <input type="password" id="password" name="password" ngModel class="form-control">
       </div>
-      <button type="submit" class="btn btn-primary" [disabled]="f.invalid">Sign In</button>
+      <button class="btn btn-primary" type="submit" [disabled]="!f.valid">Sign In</button>
     </form>
   </div>
 </div>
