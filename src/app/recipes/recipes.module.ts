@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 
+import { AuthGuard } from '../auth/auth-guard.service';
 import { SharedModule } from '../shared/shared.module';
 import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 import { RecipeEditComponent } from './recipe-edit/recipe-edit.component';
@@ -21,6 +22,6 @@ import { RecipesComponent } from './recipes.component';
   ],
   imports: [ReactiveFormsModule, RecipesRoutingModule, SharedModule],
   exports: [],
-  providers: []
+  providers: [AuthGuard]
 })
 export class RecipesModule {}
