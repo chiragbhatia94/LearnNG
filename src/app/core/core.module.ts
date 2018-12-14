@@ -8,7 +8,6 @@ import { AuthInterceptor } from '../shared/auth.interceptor';
 import { DataStorageService } from '../shared/data-storage.service';
 import { LoggingInterceptor } from '../shared/logging.interceptor';
 import { SharedModule } from '../shared/shared.module';
-import { ShoppingListService } from '../shopping-list/shopping-list.service';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 
@@ -17,7 +16,6 @@ import { HomeComponent } from './home/home.component';
   imports: [SharedModule, AppRoutingModule],
   exports: [AppRoutingModule, HeaderComponent, HomeComponent],
   providers: [
-    ShoppingListService,
     RecipeService,
     DataStorageService,
     AuthService,

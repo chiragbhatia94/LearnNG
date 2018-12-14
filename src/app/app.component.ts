@@ -16,8 +16,4 @@ export class AppComponent implements OnInit {
     };
     firebase.initializeApp(config);
   }
-
-  onNavigate(feature: string) {
-    this.loadedFeature = feature;
-  }
 }
