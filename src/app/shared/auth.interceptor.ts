@@ -15,16 +15,14 @@ export class AuthInterceptor implements HttpInterceptor {
     req: HttpRequest<any>,
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
-    return this.store
-      .select('auth')
-      .pipe(take(1))
-      .pipe(
-        switchMap((authState: fromAuth.State) => {
-          const newReq = req.clone({
-            params: req.params.append('auth', authState.token)
-          });
-          return next.handle(newReq);
-        })
-      );
+    return this.store.select('auth').pipe(
+      take(1),
+      switchMap((authState: fromAuth.State) => {
+        const newReq = req.clone({
+          params: req.params.append('auth', authState.token)
+        });
+        return next.handle(newReq);
+      })
+    );
   }
 }
